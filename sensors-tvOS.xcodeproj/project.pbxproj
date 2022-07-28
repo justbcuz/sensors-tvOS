@@ -12,6 +12,8 @@
 		66C8643C288EE18100CC340B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66C8643A288EE18100CC340B /* Main.storyboard */; };
 		66C8643E288EE18200CC340B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66C8643D288EE18200CC340B /* Assets.xcassets */; };
 		66C86441288EE18200CC340B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66C8643F288EE18200CC340B /* LaunchScreen.storyboard */; };
+		66C86449288EE1B800CC340B /* sensors.m in Sources */ = {isa = PBXBuildFile; fileRef = 66C86448288EE1B800CC340B /* sensors.m */; };
+		66C8644C288EE5E300CC340B /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66C8644B288EE5E300CC340B /* IOKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,9 @@
 		66C8643B288EE18100CC340B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		66C8643D288EE18200CC340B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66C86440288EE18200CC340B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		66C86447288EE1B800CC340B /* sensors-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "sensors-Bridging-Header.h"; sourceTree = "<group>"; };
+		66C86448288EE1B800CC340B /* sensors.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = sensors.m; sourceTree = "<group>"; };
+		66C8644B288EE5E300CC340B /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = ../../../../Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/System/Library/Frameworks/IOKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66C8644C288EE5E300CC340B /* IOKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -39,6 +45,7 @@
 			children = (
 				66C86435288EE18100CC340B /* sensors-tvOS */,
 				66C86434288EE18100CC340B /* Products */,
+				66C8644A288EE5E200CC340B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,13 +60,23 @@
 		66C86435288EE18100CC340B /* sensors-tvOS */ = {
 			isa = PBXGroup;
 			children = (
+				66C86448288EE1B800CC340B /* sensors.m */,
 				66C86436288EE18100CC340B /* AppDelegate.swift */,
 				66C86438288EE18100CC340B /* ViewController.swift */,
 				66C8643A288EE18100CC340B /* Main.storyboard */,
 				66C8643D288EE18200CC340B /* Assets.xcassets */,
 				66C8643F288EE18200CC340B /* LaunchScreen.storyboard */,
+				66C86447288EE1B800CC340B /* sensors-Bridging-Header.h */,
 			);
 			path = "sensors-tvOS";
+			sourceTree = "<group>";
+		};
+		66C8644A288EE5E200CC340B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				66C8644B288EE5E300CC340B /* IOKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				66C86439288EE18100CC340B /* ViewController.swift in Sources */,
+				66C86449288EE1B800CC340B /* sensors.m in Sources */,
 				66C86437288EE18100CC340B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,6 +312,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.swa.innovationlabs.sensors-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "sensors-tvOS/sensors-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 			};
@@ -319,6 +338,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.swa.innovationlabs.sensors-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "sensors-tvOS/sensors-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 			};
